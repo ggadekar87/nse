@@ -1,0 +1,9 @@
+.menu {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.menu  li {
+        margin-left: 10px;
+    display: inline;
+}

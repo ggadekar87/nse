@@ -1,22 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./components/Home";
+//https://github.com/hi-imcodeman/stock-nse-india
+import "bootstrap/dist/css/bootstrap.min.css";
+import MenuBar from "./components/MenuBar/MenuBar";
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <span class="label info"> C:\UI\1 NSE\api\stock-nse-india\src</span>
+        <MenuBar></MenuBar>
+        <Home></Home>
       </header>
     </div>
   );
