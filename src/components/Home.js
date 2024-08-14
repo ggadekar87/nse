@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import data from "../Stock.json";
+
 export default function Home() {
   const [symbols, setSymbols] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -18,17 +20,18 @@ export default function Home() {
       headers: { "Access-Control-Allow-Origin": "*" },
     };
     setLoading(true);
-
-    axios
-      .get("http://localhost:3000/api/allSymbols", config)
-      .then((res) => {
-        setSymbols(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
+    setSymbols(data);
+    setLoading(false);
+    // axios
+    //   .get("http://localhost:3000/api/allSymbols", config)
+    //   .then((res) => {
+    //     setSymbols(res.data);
+    //     setLoading(false);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     setLoading(false);
+    //   });
   };
 
   function searchGoogle(query) {
