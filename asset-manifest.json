@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/nseindia/static/css/main.9cca7219.css",
-    "main.js": "/nseindia/static/js/main.3a58a30b.js",
-    "static/js/453.1b7cc06e.chunk.js": "/nseindia/static/js/453.1b7cc06e.chunk.js",
-    "static/media/logo.svg": "/nseindia/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/nseindia/index.html",
-    "main.9cca7219.css.map": "/nseindia/static/css/main.9cca7219.css.map",
-    "main.3a58a30b.js.map": "/nseindia/static/js/main.3a58a30b.js.map",
-    "453.1b7cc06e.chunk.js.map": "/nseindia/static/js/453.1b7cc06e.chunk.js.map"
+    "main.css": "/nse/static/css/main.9cca7219.css",
+    "main.js": "/nse/static/js/main.200c6303.js",
+    "static/js/453.1b7cc06e.chunk.js": "/nse/static/js/453.1b7cc06e.chunk.js",
+    "static/media/logo.svg": "/nse/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/nse/index.html",
+    "main.9cca7219.css.map": "/nse/static/css/main.9cca7219.css.map",
+    "main.200c6303.js.map": "/nse/static/js/main.200c6303.js.map",
+    "453.1b7cc06e.chunk.js.map": "/nse/static/js/453.1b7cc06e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9cca7219.css",
-    "static/js/main.3a58a30b.js"
+    "static/js/main.200c6303.js"
   ]
 }
