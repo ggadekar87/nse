@@ -39,6 +39,15 @@ export default function MenuBar() {
             EMA less 200
           </a>
         </li>
+       <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://chartink.com/screener/swing-ema-less-then-200"
+          >
+            Exponential moving avg > 20  shorttrem
+          </a>
+        </li>
       </ul>
     </>
   );
