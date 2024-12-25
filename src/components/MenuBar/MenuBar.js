@@ -39,13 +39,13 @@ export default function MenuBar() {
             EMA less 200
           </a>
         </li>
-               <li>
+        <li>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.tradingview.com/"
           >
-            Exponetial Mov avd > 20 shprt trem
+            Exponetial Mov avd 20 shprt trem
           </a>
         </li>
       </ul>
