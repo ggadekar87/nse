@@ -48,6 +48,13 @@ export default function Home() {
     // change current web page to search query
     // document.location.href = base + query + "/";
   }
+  function searchNSEIndia(query) {
+    //let base = "https://google.com/search?q=";
+    let base = "https://www.nseindia.com/get-quotes/equity?symbol=";
+    window.open(base + query, "_blank");
+    // change current web page to search query
+    // document.location.href = base + query + "/";
+  }
 
   const handleChange = (value) => {
     const result = symbols.filter((str) => str.startsWith(value.toUpperCase()));
@@ -125,6 +132,13 @@ export default function Home() {
                               onClick={() => searchScreener(data)}
                             >
                               Screener
+                            </Button>
+                            /
+                            <Button
+                              variant="info"
+                              onClick={() => searchNSEIndia(data)}
+                            >
+                              NSE
                             </Button>
                           </td>
                         </tr>
