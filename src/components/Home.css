@@ -7,7 +7,7 @@ ul {
   width: 100%;
 }
 
-li { 
+li {
   padding: 3px;
   border-bottom: 1px solid #ccc;
 }
@@ -20,41 +20,41 @@ li:hover {
   background-color: #f7a8a8;
 }
 table {
-    width: 100%;
+  width: 100%;
 }
-table td:first-child{
-    width: 20%;
+table td:first-child {
+  width: 20%;
 }
 table td:nth-child(2) {
-    width: 40%;
+  width: 40%;
 }
 table td:nth-child(3) {
-    width: 40%;
+  width: 40%;
 }
 .tab1 {
-    width: 80%;
+  width: 80%;
 }
-.tab1 td:first-child{
-    width: 50%;
+.tab1 td:first-child {
+  width: 50%;
 }
 
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: #FF3D00;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 
 @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }

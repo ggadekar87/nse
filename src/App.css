@@ -37,20 +37,18 @@
   }
 }
 
-
-
 .label {
   color: white;
   padding: 8px;
 }
 
 .success {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
 }
 
 /* Green */
 .info {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Blue */
@@ -70,4 +68,3 @@
 }
 
 /* Gray */
-

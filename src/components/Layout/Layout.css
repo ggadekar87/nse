@@ -1,0 +1,29 @@
+header {
+  text-align: center;
+}
+
+nav .navMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  float: right;
+}
+
+nav li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+nav a.active {
+  color: #666;
+  font-weight: bold;
+}

@@ -5,7 +5,7 @@ import "./Home.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import data from "../Stock.json";
-
+import MenuBar from "./MenuBar/MenuBar";
 export default function Home() {
   const [symbols, setSymbols] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -62,6 +62,7 @@ export default function Home() {
   };
   return (
     <>
+      <MenuBar></MenuBar>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
