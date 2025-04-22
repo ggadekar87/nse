@@ -1,0 +1,18 @@
+{
+  "FinancialQuarter": [
+    "Jan to March",
+    "April to June",
+    "July to Sept",
+    "Oct to Dec"
+  ],
+  "Stoks": [
+    {
+      "Name": "ABC",
+      "CheckDate": "12April2025"
+    },
+    {
+      "Name": "rrr",
+      "CheckDate": "15April2025"
+    }
+  ]
+}
