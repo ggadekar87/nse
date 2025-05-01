@@ -1,8 +1,25 @@
 import "./MenuBar.css";
+import { Outlet, Link } from "react-router-dom";
+
 export default function MenuBar() {
   return (
     <>
       <ul className="menu">
+        <li>
+          <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/Support">Admin</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
         <li>
           <a
             target="_blank"

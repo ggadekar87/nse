@@ -3,9 +3,7 @@ import "./App.css";
 import Home from "./components/Home";
 //https://github.com/hi-imcodeman/stock-nse-india
 import "bootstrap/dist/css/bootstrap.min.css";
-import MenuBar from "./components/MenuBar/MenuBar";
 import { Routes, Route } from 'react-router-dom';
-import ExcelFile from "./components/Excel/Excel";
 import NotFound from "./NotFound";
 import Layout from "./components/Layout/Layout";
 import Support from "./components/Support/Support";
@@ -14,7 +12,6 @@ function App() {
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/nse" element={<Home />} />
-      <Route path="/ExcelFile" element={<ExcelFile />} />
       <Route path="/Support" element={<Support />} />
       <Route component={NotFound} />
     </Routes>

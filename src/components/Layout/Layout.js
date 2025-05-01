@@ -1,22 +1,11 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
 import Aux from "../hoc/Auxillary";
 import './Layout.css'
+import MenuBar from "../MenuBar/MenuBar";
 const Layout = (props) => {
     return (
         <Aux>
-            <div className="topnav"><nav>
-                <ul className="navMenu">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/ExcelFile">Excel</Link>
-                    </li> <li>
-                        <Link to="/Support">Admin</Link>
-                    </li>
-                </ul></nav>
-            </div>
+            <MenuBar></MenuBar>
             <div className="row">
                 <div className="column">
                     <main>{props.children}</main>

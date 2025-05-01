@@ -17,7 +17,12 @@ li:last-child {
 }
 
 li:hover {
-  background-color: #f7a8a8;
+  background-color: #b88c8c;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 5px;
+  border-radius: 10px;
 }
 table {
   width: 100%;

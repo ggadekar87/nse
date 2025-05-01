@@ -1,38 +1,21 @@
-import { NseIndia } from "stock-nse-india";
-import axios from "axios";
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import data from "../Stock.json";
-import MenuBar from "./MenuBar/MenuBar";
 import ProgressBar from "./Excel/ProgressBar";
 export default function Home() {
   const [symbols, setSymbols] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const [symbol, setSymbol] = useState([]);
   const [symbolsFL, setSymbolsFL] = useState([]);
   useEffect(() => {
     GetAllStockSymbols();
   }, []);
   const GetAllStockSymbols = () => {
-    var config = {
-      headers: { "Access-Control-Allow-Origin": "*" },
-    };
     setLoading(true);
     setSymbols(data);
     setLoading(false);
-    // axios
-    //   .get("http://localhost:3000/api/allSymbols", config)
-    //   .then((res) => {
-    //     setSymbols(res.data);
-    //     setLoading(false);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     setLoading(false);
-    //   });
   };
 
   function searchGoogle(query) {
@@ -63,7 +46,6 @@ export default function Home() {
   };
   return (
     <>
-      <MenuBar></MenuBar>
       <ProgressBar />
       <div class="container">
         <div class="row">
