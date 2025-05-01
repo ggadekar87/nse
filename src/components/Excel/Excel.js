@@ -2,14 +2,12 @@ import myData from './data.json';
 import { useEffect, useState } from 'react';
 import "./Excel.css"
 import { saveAs } from 'file-saver';
-
 const ExcelFile = () => {
     const [data, setData] = useState(myData);
     const [formData, setFormData] = useState({
         name: '',
         date: ''
     });
-
     useEffect(() => {
         fetch('./data.json') // Path to JSON file
             .then(data => {
@@ -37,14 +35,7 @@ const ExcelFile = () => {
         console.log('Form Data:', formData);
     };
     return <>
-        <table className='QTable'>
-            <th><tr><td colspan={4}>FinancialQuarter</td></tr></th>
-            <tbody>
-                {data.FinancialQuarter.map((dt, index) => {
-                    return <tr><td key={index}>{dt}</td></tr>
-                })}
-            </tbody>
-        </table>
+
         <hr></hr>   <form onSubmit={handleSubmit}>
             <div>
                 <label>Name:</label>

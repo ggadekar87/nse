@@ -1,0 +1,42 @@
+.progress-bar-container {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.month-box {
+  flex: 1;
+  text-align: center;
+  padding: 1px;
+  margin: 2px;
+  background: #e0e0e0;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 1px;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+  height: 25px;
+}
+
+.month-box.highlighted {
+  background: #4caf50; /* Highlight color */
+  color: #fff;
+}
+
+.month-box.highlightedStart {
+  color: #260261; /* Highlight color */
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #260261;
+  text-transform: uppercase;
+}
+
+.month-box.highlightedEnd {
+  color: #dc090d; /* Highlight color */
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #dc090d;
+  text-transform: uppercase;
+}

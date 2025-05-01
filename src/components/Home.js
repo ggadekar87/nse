@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import data from "../Stock.json";
 import MenuBar from "./MenuBar/MenuBar";
+import ProgressBar from "./Excel/ProgressBar";
 export default function Home() {
   const [symbols, setSymbols] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -63,10 +64,10 @@ export default function Home() {
   return (
     <>
       <MenuBar></MenuBar>
+      <ProgressBar />
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <h2>All</h2>
             <p>
               <Button
                 style={{ width: "100%" }}
@@ -105,7 +106,6 @@ export default function Home() {
             </p>
           </div>
           <div class="col-md-7">
-            <h2>Search</h2>
             <p>
               <Form.Control
                 type="text"
