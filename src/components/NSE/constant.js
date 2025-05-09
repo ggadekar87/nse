@@ -1,0 +1,16 @@
+export const MARKET_STATUS_URL = 'https://www1.nseindia.com//emerge/homepage/smeNormalMktStatus.json';
+export const INDICES_WATCH_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/stock_watch/liveIndexWatchData.json';
+export const SECTORS_LIST = 'https://www1.nseindia.com/homepage/peDetails.json';
+export const QUOTE_INFO_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxGetQuoteJSON.jsp?series=EQ&symbol=';
+export const GET_QUOTE_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/GetQuote.jsp?symbol=';
+export const GAINERS_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/gainers/niftyGainers1.json';
+export const LOSERS_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/losers/niftyLosers1.json';
+export const ADVANCES_DECLINES_URL = 'https://www1.nseindia.com/common/json/indicesAdvanceDeclines.json';
+export const INDEX_STOCKS_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/stock_watch/';
+export const INTRADAY_URL = 'https://www1.nseindia.com/charts/webtame/tame_intraday_getQuote_closing_redgreen.jsp?Segment=CM&Series=EQ&CDExpiryMonth=&FOExpiryMonth=&IRFExpiryMonth=&CDDate1=&CDDate2=&Template=tame_intraday_getQuote_closing_redgreen.jsp&CDSymbol=';
+export const SEARCH_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxCompanySearch.jsp?search=';
+export const STOCK_OPTIONS_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/ajaxFOGetQuoteJSON.jsp';
+export const YEAR_HIGH_URL = 'https://www1.nseindia.com/products/dynaContent/equities/equities/json/online52NewHigh.json';
+export const YEAR_LOW_URL = 'https://www1.nseindia.com/products/dynaContent/equities/equities/json/online52NewLow.json';
+export const TOP_VALUE_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/most_active/allTopValue1.json';
+export const TOP_VOLUME_URL = 'https://www1.nseindia.com/live_market/dynaContent/live_analysis/most_active/allTopVolume1.json';

@@ -7,12 +7,14 @@ import { Routes, Route } from 'react-router-dom';
 import NotFound from "./NotFound";
 import Layout from "./components/Layout/Layout";
 import Support from "./components/Support/Support";
+import NseStock from "./components/NSE/nse-stock";
 function App() {
   let routes = (
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/nse" element={<Home />} />
       <Route path="/Support" element={<Support />} />
+      <Route path="/nse-stock" element={<NseStock />} />
       <Route component={NotFound} />
     </Routes>
   );
