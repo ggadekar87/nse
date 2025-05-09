@@ -87,7 +87,7 @@ export default function Home() {
               )}
             </p>
           </div>
-          <div class="col-md-7">
+          <div class="col-md-8">
             <p>
               <Form.Control
                 type="text" className="inputBox"
@@ -98,34 +98,28 @@ export default function Home() {
                 {symbolsFL.map((data, index) => {
                   return (
                     <li key={index}>
-                      <table>
-                        <tr>
-                          <td>{data}</td>
-                          <td>
-                            <Button
-                              variant="success"
-                              onClick={() => searchGoogle(data)}
-                            >
-                              tradingview chart
-                            </Button>
-                          </td>
-                          <td>
-                            <Button
-                              variant="info"
-                              onClick={() => searchScreener(data)}
-                            >
-                              Screener
-                            </Button>
-                            /
-                            <Button
-                              variant="info"
-                              onClick={() => searchNSEIndia(data)}
-                            >
-                              NSE
-                            </Button>
-                          </td>
-                        </tr>
-                      </table>
+                      <div className="SearchData">
+                        <div>{data}</div>
+                        <div> <Button className="SearchBtn"
+                          variant="success"
+                          onClick={() => searchGoogle(data)}
+                        >
+                          TradingView
+                        </Button></div>
+                        <div> <Button className="SearchBtn"
+                          variant="info"
+                          onClick={() => searchScreener(data)}
+                        >
+                          Screener
+                        </Button></div>
+                        <div><Button className="SearchBtn"
+                          variant="info"
+                          onClick={() => searchNSEIndia(data)}
+                        >
+                          NSE
+                        </Button></div>
+
+                      </div>
                     </li>
                   );
                 })}
