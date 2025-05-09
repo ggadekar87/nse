@@ -63,13 +63,13 @@ export default function Home() {
                   <span class="loader"></span>
                 </p>
               ) : (
-                <ul>
+                <ul className="listScroll">
                   {symbols.map((data, index) => {
                     return (
-                      <li key={index}>
+                      <li key={index} >
                         <table className="tab1">
-                          <tr>
-                            <td>{data} </td>
+                          <tr >
+                            <td> <button className="buttonLink" onClick={() => handleChange(data)}>{data}</button>  </td>
                             <td>
                               <Button
                                 variant="primary"
@@ -90,7 +90,7 @@ export default function Home() {
           <div class="col-md-7">
             <p>
               <Form.Control
-                type="text"
+                type="text" className="inputBox"
                 onChange={(event) => handleChange(event.target.value)}
               />
 

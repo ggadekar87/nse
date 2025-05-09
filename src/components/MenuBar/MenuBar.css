@@ -1,13 +1,23 @@
 .menu {
   list-style-type: none;
   padding: 10px;
+  background-color: #fcfbfb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0vmin;
+}
+.menu > li:hover {
+  background-color: yellow;
+  border: 1px solid #0f0303;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 5px;
+  border-radius: 10px;
 }
 a {
-  color: #4f4e4e;
+  color: #0f0303;
 }
-a :hover {
-  background-color: #f29f9f;
-  color: white;
+a:hover {
   font-weight: bold;
   text-decoration: underline;
   padding: 5px;
