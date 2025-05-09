@@ -30,7 +30,7 @@ export default function MenuBar() {
             rel="noreferrer"
             href="https://kite.zerodha.com/dashboard"
           >
-            zerodha
+            ZERODHA
           </a>
         </li>
         <li>
@@ -39,7 +39,7 @@ export default function MenuBar() {
             rel="noreferrer"
             href="https://www.screener.in/screens/1829391/rsc40/"
           >
-            RSC less 40
+            RSI less 40
           </a>
         </li>
         <li>
@@ -64,9 +64,18 @@ export default function MenuBar() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.tradingview.com/"
+            href="https://www.screener.in/screens/2741103/rsi-60/"
           >
-            Exponetial Mov avd 20 shprt trem
+            RSI greater 50
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.screener.in/screens/2737233/pricevolumn/"
+          >
+            PriceVolumn
           </a>
         </li>
       </ul>
