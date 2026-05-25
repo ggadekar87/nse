@@ -56,7 +56,7 @@ export default function Home() {
                 variant="danger"
                 onClick={GetAllStockSymbols}
               >
-                Load
+                Load.!
               </Button>
               {loading ? (
                 <p>
