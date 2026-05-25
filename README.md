@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+For git hub pages use
+  // "homepage": "https://ggadekar87.github.io/nse",//use fir git pages
+
+
 ## Available Scripts
 
 In the project directory, you can run:
