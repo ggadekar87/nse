@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/Home";
 //https://github.com/hi-imcodeman/stock-nse-india
