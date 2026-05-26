@@ -10,15 +10,14 @@ import NseStock from "./components/NSE/nse-stock";
 function App() {
   let routes = (
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/nse" element={<Home />} />
-      <Route path="/Support" element={<Support />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/support" element={<Support />} />
       <Route path="/nse-stock" element={<NseStock />} />
-      <Route component={NotFound} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
   return (
-    <Layout >{routes}</Layout>
+    <Layout>{routes}</Layout>
   );
 }
 
