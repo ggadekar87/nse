@@ -1,8 +1,12 @@
 {
-  "routes": [
-    {
-      "route": "/*",
-      "serve": "/index.html"
-    }
-  ]
+  "navigationFallback": {
+    "rewrite": "/nse/index.html",
+    "exclude": [
+      "/nse/static/*",
+      "/nse/*.json",
+      "/nse/*.png",
+      "/nse/*.ico",
+      "/nse/robots.txt"
+    ]
+  }
 }
