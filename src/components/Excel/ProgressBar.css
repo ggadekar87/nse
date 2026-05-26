@@ -1,42 +1,193 @@
-.progress-bar-container {
+.progress-bar-frame {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+}
+
+.progress-bar-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  gap: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.progress-label {
+  margin: 0;
+  color: #2563eb;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+.progress-title {
+  margin: 0.35rem 0 0;
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.progress-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #475569;
+  padding: 0.45rem 0.65rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.progress-current strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+.progress-bar-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .month-box {
-  flex: 1;
-  text-align: center;
-  padding: 1px;
-  margin: 2px;
-  background: #e0e0e0;
-  border: 1px solid #d0d0d0;
-  border-radius: 4px;
-  font-size: 1px;
-  color: #333;
-  transition: background 0.3s, color 0.3s;
-  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 0.25rem 0.3rem;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
 }
 
-.month-box.highlighted {
-  background: #4caf50; /* Highlight color */
-  color: #fff;
+.month-box:hover {
+  transform: translateY(-0.75px);
+}
+
+.month-box.active {
+  position: relative;
+  background: #4caf50;
+  color: #ffffff;
+  border-color: #4caf50;
+}
+
+.month-box.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.4rem;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #4caf50;
+}
+
+.month-box.passed {
+  opacity: 0.45;
+  background: #e2e8f0;
+  color: #64748b;
+  border-color: #cbd5e1;
 }
 
 .month-box.highlightedStart {
-  color: #260261; /* Highlight color */
-  font-weight: bold;
-  font-size: 14px;
-  border: 2px solid #260261;
-  text-transform: uppercase;
+  border-color: #6d28d9;
+  color: #312e81;
 }
 
 .month-box.highlightedEnd {
-  color: #dc090d; /* Highlight color */
-  font-weight: bold;
-  font-size: 14px;
-  border: 2px solid #dc090d;
+  border-color: #dc2626;
+  color: #7f1d1d;
+}
+
+.month-box.settlement-month {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #1d4ed8;
+}
+
+.month-date {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.progress-legend {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+
+.month-tag {
+  margin-top: 0.2rem;
+  font-size: 0.65rem;
+  color: inherit;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.progress-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+}
+
+.active-dot {
+  background: #4caf50;
+}
+
+.start-dot {
+  background: #6d28d9;
+}
+
+.end-dot {
+  background: #dc2626;
+}
+
+@media (max-width: 860px) {
+  .progress-bar-container {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .progress-bar-frame {
+    padding: 0.85rem 0.95rem;
+  }
+
+  .progress-bar-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .progress-bar-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .progress-legend {
+    grid-template-columns: 1fr;
+  }
 }
