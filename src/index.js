@@ -12,7 +12,7 @@ const basename = window.location.pathname.startsWith('/nse')
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter  >
       <App />
     </BrowserRouter>
   </React.StrictMode>
