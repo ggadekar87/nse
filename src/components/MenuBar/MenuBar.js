@@ -26,7 +26,7 @@ export default function MenuBar() {
             <Link to="/Support">Admin</Link>
           </li>
           <li>
-            <Link to="/nse-stock">NSE Stock</Link>
+            <Link to="/nse-stock">Quarter</Link>
           </li>
           <li>
             <a
