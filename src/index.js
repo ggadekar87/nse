@@ -6,9 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const basename = window.location.pathname.startsWith('/nse')
+  ? '/nse'
+  : (process.env.PUBLIC_URL || '/');
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL || '/nse'}>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
