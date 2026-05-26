@@ -7,125 +7,142 @@ import ProgressBar from "./Excel/ProgressBar";
 export default function Home() {
   const [symbols, setSymbols] = useState([]);
   const [loading, setLoading] = useState(false);
-
   const [symbolsFL, setSymbolsFL] = useState([]);
+  const [selectedSymbol, setSelectedSymbol] = useState(null);
+
   useEffect(() => {
     GetAllStockSymbols();
   }, []);
+
   const GetAllStockSymbols = () => {
     setLoading(true);
     setSymbols(data);
+    setSymbolsFL([]);
+    setSelectedSymbol(null);
     setLoading(false);
   };
 
+  const selectSymbol = (query) => setSelectedSymbol(query);
+
   function searchGoogle(query) {
-    //let base = "https://google.com/search?q=";
-    let base = "https://tradingview.com/symbols/NSE-";
+    selectSymbol(query);
+    const base = "https://tradingview.com/symbols/NSE-";
     window.open(base + query + "/", "_blank");
-    // change current web page to search query
-    // document.location.href = base + query + "/";
   }
   function searchScreener(query) {
-    //let base = "https://google.com/search?q=";
-    let base = "https://www.screener.in/company/";
+    selectSymbol(query);
+    const base = "https://www.screener.in/company/";
     window.open(base + query + "/", "_blank");
-    // change current web page to search query
-    // document.location.href = base + query + "/";
   }
   function searchNSEIndia(query) {
-    //let base = "https://google.com/search?q=";
-    let base = "https://www.nseindia.com/get-quotes/equity?symbol=";
+    selectSymbol(query);
+    const base = "https://www.nseindia.com/get-quotes/equity?symbol=";
     window.open(base + query, "_blank");
-    // change current web page to search query
-    // document.location.href = base + query + "/";
   }
 
   const handleChange = (value) => {
     const result = symbols.filter((str) => str.startsWith(value.toUpperCase()));
     setSymbolsFL(result);
+    setSelectedSymbol(null);
   };
+
   return (
     <>
       <ProgressBar />
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <p>
+      <div className="home-container">
+        <div className="home-grid">
+          <section className="panel stock-panel">
+            <div className="panel-heading">
               <Button
                 style={{ width: "100%" }}
                 variant="danger"
                 onClick={GetAllStockSymbols}
               >
-                Load.!!
+                Load All Symbols
               </Button>
-              {loading ? (
-                <p>
-                  <span class="loader"></span>
-                </p>
-              ) : (
-                <ul className="listScroll">
-                  {symbols.map((data, index) => {
-                    return (
-                      <li key={index} >
-                        <table className="tab1">
-                          <tr >
-                            <td> <button className="buttonLink" onClick={() => handleChange(data)}>{data}</button>  </td>
-                            <td>
-                              <Button
-                                variant="primary"
-                                onClick={() => searchGoogle(data)}
-                              >
-                                chart
-                              </Button>
-                            </td>
-                          </tr>
-                        </table>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </p>
-          </div>
-          <div class="col-md-8">
-            <p>
-              <Form.Control
-                type="text" className="inputBox"
-                onChange={(event) => handleChange(event.target.value)}
-              />
-
-              <ul>
-                {symbolsFL.map((data, index) => {
+            </div>
+            {loading ? (
+              <div className="loading-state">
+                <span className="loader"></span>
+                <span>Loading symbols...</span>
+              </div>
+            ) : (
+              <ul className="listScroll stock-list">
+                {symbols.map((data, index) => {
                   return (
-                    <li key={index}>
-                      <div className="SearchData">
-                        <div>{data}</div>
-                        <div> <Button className="SearchBtn"
-                          variant="success"
+                    <li key={index} className="stock-item">
+                      <div className="stock-item-row">
+                        <button
+                          className="buttonLink"
+                          onClick={() => handleChange(data)}
+                        >
+                          {data}
+                        </button>
+                        <Button
+                          variant="primary"
+                          size="sm"
                           onClick={() => searchGoogle(data)}
                         >
-                          TradingView
-                        </Button></div>
-                        <div> <Button className="SearchBtn"
-                          variant="info"
-                          onClick={() => searchScreener(data)}
-                        >
-                          Screener
-                        </Button></div>
-                        <div><Button className="SearchBtn"
-                          variant="info"
-                          onClick={() => searchNSEIndia(data)}
-                        >
-                          NSE
-                        </Button></div>
-
+                          chart
+                        </Button>
                       </div>
                     </li>
                   );
                 })}
               </ul>
-            </p>
-          </div>
+            )}
+          </section>
+
+          <section className="panel results-panel">
+            <div className="panel-heading">
+              <h2>Search Results</h2>
+            </div>
+            <Form.Control
+              type="text"
+              className="inputBox"
+              placeholder="Type symbol prefix to filter"
+              onChange={(event) => handleChange(event.target.value)}
+            />
+
+            <ul className="search-results">
+              {symbolsFL.map((data, index) => {
+                const isSelected = selectedSymbol === data;
+                return (
+                  <li
+                    key={index}
+                    className={isSelected ? "search-result-item selected" : "search-result-item"}
+                  >
+                    <div className="search-data">
+                      <div className="search-symbol">{data}</div>
+                      <div className="search-actions">
+                        <Button
+                          className="SearchBtn"
+                          variant="success"
+                          onClick={() => searchGoogle(data)}
+                        >
+                          TradingView
+                        </Button>
+                        <Button
+                          className="SearchBtn"
+                          variant="info"
+                          onClick={() => searchScreener(data)}
+                        >
+                          Screener
+                        </Button>
+                        <Button
+                          className="SearchBtn"
+                          variant="secondary"
+                          onClick={() => searchNSEIndia(data)}
+                        >
+                          NSE
+                        </Button>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
         </div>
       </div>
     </>
